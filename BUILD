@@ -1,7 +1,12 @@
 cc_binary(
     name = "main",
     srcs = ["main.cc"],
-    deps = [":substr_search_factory"],
+    deps = [
+      ":substr_search_factory",
+      "@com_github_absl//absl/strings",
+      "@com_github_gflags_gflags//:gflags",
+      "@com_github_absl//absl/time",
+    ],
 )
 
 cc_library(
