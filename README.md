@@ -8,4 +8,9 @@ Here you can find C++ implementations of the following substring search algorith
 - KMP
 - Z algorithm
 
-This is part of my high school graduation project/paper.
+Written using [gflags](https://github.com/gflags/gflags) and
+[abseil-cpp](https://github.com/abseil/abseil-cpp), tested
+with [gtest](https://github.com/google/googletest) and built with
+[bazel.build](https://bazel.build/).
+
+This is a somewhat refurbished part of my high school graduation project/paper.
