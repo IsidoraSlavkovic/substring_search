@@ -35,5 +35,5 @@ int RabinKarp::Search() {
       }
     }
   }
-  return n;
+  return -1;
 }

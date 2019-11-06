@@ -31,6 +31,9 @@ vector<int> Z::get_zarr(const string& str) {
 }
 
 int Z::Search() {
+  if (pattern_.length() == 0) {
+    return 0;
+  }
   string concat = pattern_ + "$" + text_;
   int l = concat.length();
 
@@ -40,5 +43,5 @@ int Z::Search() {
       return i - pattern_.length() - 1;
     }
   }
-  return text_.length();
+  return -1;
 }

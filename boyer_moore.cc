@@ -7,6 +7,9 @@
 int BoyerMoore::Search() {
   int n = text_.length();
   int m = pattern_.length();
+  if (m == 0) {
+    return 0;
+  }
   int r = 256;
   std::vector<int> right(r, -1);
 
@@ -31,5 +34,5 @@ int BoyerMoore::Search() {
     }
   }
 
-  return n;
+  return -1;
 }

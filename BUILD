@@ -3,15 +3,25 @@ cc_binary(
     srcs = ["main.cc"],
     deps = [
       ":substr_search_factory",
-      "@com_github_absl//absl/strings",
+      "@com_github_abseil_abseil-cpp//absl/strings",
+      "@com_github_abseil_abseil-cpp//absl/time",
       "@com_github_gflags_gflags//:gflags",
-      "@com_github_absl//absl/time",
     ],
 )
 
 cc_library(
     name = "substr_search",
     hdrs = ["substr_search.h"],
+)
+
+cc_test(
+    name = "substr_search_test",
+    srcs = ["substr_search_test.cc"],
+    deps = [
+      ":substr_search_factory",
+      ":substr_search",
+      "@com_github_google_googletest//:gtest",
+    ],
 )
 
 cc_library(

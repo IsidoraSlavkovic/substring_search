@@ -5,6 +5,9 @@
 int Kmp::Search() {
   int m = pattern_.length();
   int r = 256;
+  if (m == 0) {
+    return 0;
+  }
   std::vector<std::vector<int>> dfa(r, std::vector<int>(m));
   dfa[pattern_[0]][0] = 1;
 
@@ -22,5 +25,5 @@ int Kmp::Search() {
     j = dfa[text_[i]][j];
   }
 
-  return j == m ? i - m : n;
+  return j == m ? i - m : -1;
 }

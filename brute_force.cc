@@ -14,5 +14,5 @@ int BruteForce::Search() {
       return i;
     }
   }
-  return n;
+  return -1;
 }

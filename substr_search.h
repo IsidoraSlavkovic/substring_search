@@ -13,6 +13,9 @@ class SubstrSearch {
 
   string GetPattern() const { return pattern_; }
   string GetText() const { return text_; }
+  // Looks for pattern in text and returns the index of the first appearance, if
+  // any. Returns -1 if the pattern doesn't appeare in the text and 0 if the
+  // pattern is empty.
   virtual int Search() = 0;
 
  protected:
